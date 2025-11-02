@@ -1,0 +1,236 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageTitle = "Collection Diaries";
+const pageDescription = "Dive into the intimate stories behind legendary sneaker collections at Sole Sanctum. Share your tales of rare kicks and the passions that drive collectors worldwide.";
+
+const featuredDiaries = [
+  {
+    id: 1,
+    title: "The Phantom Pair",
+    author: "Elias Crowe, Shadow Hunter",
+    excerpt: "It was 1985, under a neon haze in Tokyo's backstreets...",
+    readTime: "5 min read"
+  },
+  {
+    id: 2,
+    title: "Grail Chronicles",
+    author: "Mia Rodriguez, Vault Keeper",
+    excerpt: "From the dusty shelves of SoHo to the bustling auctions of London...",
+    readTime: "7 min read"
+  },
+  {
+    id: 3,
+    title: "Midnight Mends",
+    author: "Kai Nakamura, Release Rider",
+    excerpt: "When the clock strikes 11:59 PM, the real collecting begins...",
+    readTime: "6 min read"
+  }
+];
+
+const reasons = [
+  {
+    title: "Preserve the Hunt",
+    description: "Every grail chased through midnight releases deserves its chapter."
+  },
+  {
+    title: "Inspire Fellow Collectors",
+    description: "Share the grind—from Yeezy drops to vintage Air Jordans— and spark envy or camaraderie."
+  },
+  {
+    title: "Build Legacy",
+    description: "Your diary isn't just ink on paper; it's the vintage patina of a collector's empire."
+  }
+];
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <!-- Hero Section with Vintage Texture -->
+  <header class="relative bg-gradient-to-b from-[#0a0a0a] to-[#1a1a1a] pt-24 pb-32 border-b border-[#6b1c2d]">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCI+CjxyZWN0IHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgZmlsbD0ibm9uZSIvPgo8cGF0aCBkPSJNMCAwaDYwdjYwSDB6IiBzdHJva2U9IiM2YjFjMmQiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIvPgo8L3N2Zz4=')]"></div>
+    </div>
+    
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-5xl md:text-7xl font-serif font-bold text-white mb-6 tracking-tight">
+          Collection Diaries
+        </h1>
+        <p class="text-xl md:text-2xl text-[#d4c8b7] font-light mb-8 max-w-3xl mx-auto leading-relaxed">
+          Dive into the intimate stories behind legendary sneaker collections at Sole Sanctum
+        </p>
+        <p class="text-lg text-[#a08a74] max-w-2xl mx-auto italic">
+          Share your tales of rare kicks and the passions that drive collectors worldwide
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Introduction Section -->
+  <section class="py-20 bg-[#0a0a0a] border-y border-[#6b1c2d]">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <div class="flex items-center justify-center mb-12">
+          <div class="w-24 h-1 bg-[#6b1c2d]"></div>
+          <h2 class="mx-6 text-3xl font-serif font-semibold text-white">Unveiling the Soul of Sole Sanctum</h2>
+          <div class="w-24 h-1 bg-[#6b1c2d]"></div>
+        </div>
+        
+        <div class="prose prose-lg prose-white max-w-none">
+          <p class="text-lg text-[#d4c8b7] mb-6 leading-relaxed">
+            In the shadowed corners of sneaker lore, where dust-kissed boxes hold secrets of the streets, our <em>Collection Diaries</em> come alive. This is your sanctuary to chronicle the hunts, heartaches, and triumphs of amassing rare kicks that whisper tales of rebellion and refinement.
+          </p>
+          
+          <p class="text-lg text-[#d4c8b7] leading-relaxed">
+            Whether you're tracking down vintage leather in a cramped NYC boutique or racing to secure limited releases across continents, your story matters. These diaries transform your passion into a legacy of collectible history, preserving the ethos of sneakers as art objects and cultural statements.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Document Section -->
+  <section class="py-20 bg-gradient-to-br from-[#0a0a0a] to-[#151515]">
+    <div class="container mx-auto px-4">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="text-4xl font-serif font-bold text-white text-center mb-16">Why Document Your Journey?</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {reasons.map((reason, index) => (
+            <div key={index} class="bg-[#1a1a1a] rounded-xl p-8 border border-[#6b1c2d] hover:border-[#d4c8b7] transition-all duration-300 transform hover:-translate-y-2">
+              <div class="flex items-center mb-4">
+                <div class="w-12 h-12 rounded-full bg-[#6b1c2d] flex items-center justify-center mr-4">
+                  <i class="fas fa-book-open text-white text-xl"></i>
+                </div>
+                <h3 class="text-xl font-serif font-semibold text-white">{reason.title}</h3>
+              </div>
+              <p class="text-[#d4c8b7] leading-relaxed">{reason.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Diaries Section -->
+  <section class="py-20 bg-[#0a0a0a] border-y border-[#6b1c2d]">
+    <div class="container mx-auto px-4">
+      <div class="max-w-5xl mx-auto">
+        <div class="flex items-center justify-center mb-16">
+          <div class="w-24 h-1 bg-[#6b1c2d]"></div>
+          <h2 class="mx-6 text-4xl font-serif font-bold text-white">Featured Diary Excerpts</h2>
+          <div class="w-24 h-1 bg-[#6b1c2d]"></div>
+        </div>
+        
+        <div class="space-y-10">
+          {featuredDiaries.map((diary, index) => (
+            <div key={diary.id} class="bg-gradient-to-r from-[#1a1a1a] to-[#151515] rounded-2xl p-8 border border-[#6b1c2d] hover:border-[#d4c8b7] transition-all duration-300 group">
+              <div class="flex flex-col md:flex-row">
+                <div class="md:w-3/4 mb-6 md:mb-0 md:pr-8">
+                  <div class="flex items-center mb-4">
+                    <span class="inline-block w-3 h-3 rounded-full bg-[#6b1c2d] mr-3"></span>
+                    <h3 class="text-2xl font-serif font-bold text-white group-hover:text-[#d4c8b7] transition-colors duration-300">
+                      {diary.title}
+                    </h3>
+                  </div>
+                  <p class="text-[#a08a74] text-lg mb-4">by <span class="font-semibold text-white">{diary.author}</span></p>
+                  <p class="text-[#d4c8b7] leading-relaxed mb-4">{diary.excerpt}</p>
+                  <div class="flex items-center">
+                    <span class="text-sm text-[#a08a74] bg-[#2a2a2a] px-3 py-1 rounded-full">{diary.readTime}</span>
+                    <button class="ml-4 text-[#6b1c2d] hover:text-white flex items-center">
+                      Read full story
+                      <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="md:w-1/4 flex items-center justify-center">
+                  <div class="w-24 h-24 rounded-lg bg-gradient-to-br from-[#6b1c2d] to-[#4a111d] flex items-center justify-center">
+                    <i class="fas fa-book text-white text-2xl"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+        
+        <div class="mt-16 text-center">
+          <button class="px-8 py-4 bg-[#6b1c2d] text-white font-serif font-semibold rounded-full hover:bg-[#8a253d] transition-colors duration-300 border border-[#6b1c2d] hover:border-[#d4c8b7]">
+            Explore More Diaries
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-gradient-to-r from-[#0a0a0a] via-[#151515] to-[#0a0a0a] border-y border-[#6b1c2d]">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-4xl font-serif font-bold text-white mb-6">Ready to Chronicle Your Collection?</h2>
+        <p class="text-xl text-[#d4c8b7] mb-10 max-w-2xl mx-auto">
+          Join our community of collectors and share your rare find stories with fellow enthusiasts from around the globe.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <button class="px-8 py-4 bg-[#6b1c2d] text-white font-serif font-semibold rounded-full hover:bg-[#8a253d] transition-colors duration-300 border border-[#6b1c2d] hover:border-[#d4c8b7]">
+            Submit Your Diary
+          </button>
+          <button class="px-8 py-4 bg-transparent text-white font-serif font-semibold rounded-full border border-[#6b1c2d] hover:bg-[#6b1c2d] transition-colors duration-300">
+            View Community Stories
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .prose-white :is(h1, h2, h3, h4, h5, h6) {
+    color: #ffffff;
+  }
+  
+  .prose-white :is(p, li, ul, ol) {
+    color: #d4c8b7;
+  }
+  
+  .prose-white a {
+    color: #d4c8b7;
+    text-decoration: underline;
+  }
+  
+  .prose-white a:hover {
+    color: #f0e6d2;
+  }
+  
+  .fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .delay-1 { animation-delay: 0.1s; }
+  .delay-2 { animation-delay: 0.2s; }
+  .delay-3 { animation-delay: 0.3s; }
+  .delay-4 { animation-delay: 0.4s;
+  }
+</style>
+
+<script>
+  // Simple scroll animation for elements when they enter viewport
+  document.addEventListener('DOMContentLoaded', () => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('fade-in');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    
+    document.querySelectorAll('.fade-in').forEach(el => {
+      observer.observe(el);
+    });
+  });
+</script>

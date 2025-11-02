@@ -1,0 +1,248 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageTitle = "Welcome to Sole Sanctum";
+const pageDescription = "Discover a curated haven of rare sneakers and captivating collector stories at Sole Sanctum, your ultimate destination for vintage kicks and exclusive tales.";
+
+const featuredCollections = [
+  {
+    id: 1,
+    name: "The Golden Era Collection",
+    description: "Timeless classics from the 80s and 90s",
+    image: "https://source.unsplash.com/400x300/?sneakers,retro"
+  },
+  {
+    id: 2,
+    name: "Limited Edition Legends",
+    description: "Exclusive releases that defined street culture",
+    image: "https://source.unsplash.com/400x300/?sneakers,vintage"
+  },
+  {
+    id: 3,
+    name: "Urban Artistry",
+    description: "Sneakers as canvas for artistic expression",
+    image: "https://source.unsplash.com/400x300/?sneakers,art"
+  }
+];
+
+const stories = [
+  {
+    id: 1,
+    title: "The Hunt for #1",
+    excerpt: "How one collector spent 3 years tracking down a hidden release...",
+    author: "Marcus Chen"
+  },
+  {
+    id: 2,
+    title: "Sole Stories",
+    excerpt: "Intimate tales from those who live and breathe vintage sneakers...",
+    author: "Elena Rodriguez"
+  },
+  {
+    id: 3,
+    title: "Midnight Market",
+    excerpt: "An exclusive look at the underground world of rare sneaker trading...",
+    author: "Darius West"
+  }
+];
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-br from-gray-900 to-black py-24 md:py-32 overflow-hidden">
+    <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxjaXJjbGUgY3g9IjIwIiBjeT0iMjAiIHI9IjEiIGZpbGw9IiM2YjFjMmQiIGZpbGwtb3BhY2l0eT0iLjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjcGF0dGVybikiLz48L3N2Zz4=')] opacity-20"></div>
+    
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-5xl md:text-7xl font-serif font-bold text-white mb-6 tracking-tight">
+          <span class="block">Welcome to</span>
+          <span class="block text-accent mt-2">Sole Sanctum</span>
+        </h1>
+        
+        <p class="text-xl md:text-2xl text-gray-300 font-serif max-w-3xl mx-auto leading-relaxed">
+          Your Haven for Rare Kicks and Collector Tales
+        </p>
+        
+        <div class="mt-12 flex flex-col sm:flex-row justify-center gap-4">
+          <button class="px-8 py-4 bg-accent hover:bg-opacity-90 text-white font-serif font-medium tracking-wide transition-all duration-300 transform hover:scale-105 border-2 border-accent">
+            Explore Collections
+          </button>
+          <button class="px-8 py-4 bg-transparent hover:bg-white hover:bg-opacity-10 text-white font-serif font-medium tracking-wide transition-all duration-300 border-2 border-white">
+            Read Stories
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-black to-transparent"></div>
+  </section>
+
+  <!-- Why Choose Section -->
+  <section class="py-20 bg-gray-900">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-serif font-bold text-white mb-4">Why Choose Sole Sanctum?</h2>
+        <div class="w-24 h-1 bg-accent mx-auto"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-gray-800 p-8 rounded-lg border border-gray-700 hover:border-accent transition-all duration-300 group">
+          <div class="text-accent text-4xl mb-4">
+            <i class="fas fa-search-dollar"></i>
+          </div>
+          <h3 class="text-xl font-serif font-bold text-white mb-3">Rare Finds</h3>
+          <p class="text-gray-300 leading-relaxed">
+            Unearth limited-edition gems from the golden eras of streetwear, handpicked for authenticity and allure.
+          </p>
+        </div>
+
+        <div class="bg-gray-800 p-8 rounded-lg border border-gray-700 hover:border-accent transition-all duration-300 group">
+          <div class="text-accent text-4xl mb-4">
+            <i class="fas fa-book-open"></i>
+          </div>
+          <h3 class="text-xl font-serif font-bold text-white mb-3">Collector Chronicles</h3>
+          <p class="text-gray-300 leading-relaxed">
+            Dive into intimate tales from the collectors themselves—passions ignited, hunts endured, triumphs claimed.
+          </p>
+        </div>
+
+        <div class="bg-gray-800 p-8 rounded-lg border border-gray-700 hover:border-accent transition-all duration-300 group">
+          <div class="text-accent text-4xl mb-4">
+            <i class="fas fa-music"></i>
+          </div>
+          <h3 class="text-xl font-serif font-bold text-white mb-3">Vintage Vibes</h3>
+          <p class="text-gray-300 leading-relaxed">
+            Our editorial curation blends dark, timeless aesthetics with the raw energy of urban legends.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Collections -->
+  <section class="py-20 bg-black">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-serif font-bold text-white mb-4">Featured Collections</h2>
+        <p class="text-gray-400 max-w-2xl mx-auto">Explore our vault of extraordinary sneakers from the most sought-after eras</p>
+        <div class="w-24 h-1 bg-accent mx-auto mt-4"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {featuredCollections.map((collection) => (
+          <div class="group relative overflow-hidden rounded-xl">
+            <div class="aspect-w-16 aspect-h-12">
+              <img 
+                src={collection.image} 
+                alt={collection.name} 
+                class="w-full h-72 object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-6">
+              <h3 class="text-xl font-serif font-bold text-white mb-2">{collection.name}</h3>
+              <p class="text-gray-300">{collection.description}</p>
+            </div>
+            <div class="absolute top-4 right-4 bg-accent text-white text-sm font-bold px-3 py-1 rounded-full">
+              New
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="text-center mt-12">
+        <button class="px-8 py-3 bg-transparent border-2 border-accent text-accent hover:bg-accent hover:text-white font-serif font-medium tracking-wide transition-all duration-300">
+          View All Collections
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stories Section -->
+  <section class="py-20 bg-gradient-to-b from-black to-gray-900">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-serif font-bold text-white mb-4">Collector Stories</h2>
+        <p class="text-gray-400 max-w-2xl mx-auto">Intimate tales from those who live and breathe vintage sneakers</p>
+        <div class="w-24 h-1 bg-accent mx-auto mt-4"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {stories.map((story) => (
+          <div class="bg-gray-800 rounded-lg overflow-hidden border border-gray-700 hover:border-accent transition-all duration-300 group">
+            <div class="h-48 bg-gradient-to-r from-gray-700 to-gray-900 flex items-center justify-center">
+              <div class="bg-gray-600 border-2 border-dashed rounded-xl w-16 h-16" />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-serif font-bold text-white mb-3 group-hover:text-accent transition-colors duration-300">{story.title}</h3>
+              <p class="text-gray-400 mb-4 leading-relaxed">{story.excerpt}</p>
+              <div class="flex items-center justify-between">
+                <span class="text-sm text-gray-500">{story.author}</span>
+                <button class="text-accent hover:text-white text-sm font-medium flex items-center gap-1">
+                  Read More <i class="fas fa-arrow-right text-xs"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote Section -->
+  <section class="py-20 bg-gradient-to-r from-gray-900 to-black">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <div class="text-5xl text-accent mb-6">"</div>
+        <p class="text-xl md:text-2xl text-gray-300 font-serif italic leading-relaxed">
+          In the shadowed corners of sneaker lore, where dust-kissed classics whisper secrets of the streets, 
+          Sole Sanctum emerges as the ultimate refuge for aficionados and dreamers alike.
+        </p>
+        <p class="mt-8 text-accent font-serif text-lg">— The Sole Sanctum Editorial</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-black">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center bg-gradient-to-r from-gray-900 to-black border border-gray-800 rounded-xl p-12">
+        <h2 class="text-3xl font-serif font-bold text-white mb-4">Join the Sanctuary</h2>
+        <p class="text-gray-400 mb-8 max-w-2xl mx-auto">
+          Subscribe to our newsletter for exclusive drops, collector insights, and behind-the-scenes stories.
+        </p>
+        <div class="max-w-md mx-auto flex">
+          <input 
+            type="email" 
+            placeholder="Your email address" 
+            class="flex-grow px-4 py-3 bg-gray-800 text-white rounded-l-lg focus:outline-none focus:ring-2 focus:ring-accent"
+          />
+          <button class="px-6 py-3 bg-accent hover:bg-opacity-90 text-white font-medium tracking-wide transition-all duration-300 rounded-r-lg">
+            Join
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .card-hover {
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  .card-hover:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 25px -5px rgba(107, 28, 45, 0.25);
+  }
+</style>

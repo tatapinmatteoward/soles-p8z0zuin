@@ -1,0 +1,28 @@
+---
+const currentYear = new Date().getFullYear();
+const socialLinks = [
+  { icon: 'fab fa-twitter', url: '#' },
+  { icon: 'fab fa-instagram', url: '#' },
+  { icon: 'fab fa-facebook', url: '#' },
+  { icon: 'fab fa-linkedin', url: '#' }
+];
+---
+
+<footer class="bg-[#0a0a0a] text-white py-12 border-t border-[#6b1c2d]">
+  <div class="container mx-auto px-4 text-center">
+    <p class="text-lg mb-4">Sole Sanctum</p>
+    <p class="text-sm opacity-75 mb-6">&copy; {currentYear} Sole Sanctum. All rights reserved.</p>
+    
+    <div class="flex justify-center gap-6 mb-8">
+      {socialLinks.map((link) => (
+        <a href={link.url} class="text-white hover:text-[#6b1c2d] transition-colors duration-300">
+          <i class={link.icon}></i>
+        </a>
+      ))}
+    </div>
+    
+    <div class="border-t border-[#6b1c2d] pt-6">
+      <p class="text-xs opacity-50">Vintage Dark Editorial Theme</p>
+    </div>
+  </div>
+</footer>
